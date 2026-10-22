@@ -1,0 +1,280 @@
+/* Core Typography and Block Styles */
+:root,
+#allrecords .r,
+body {
+  --t-headline-font: 'WeddingSerif', Arial, sans-serif;
+  --t-text-font: 'WeddingSerif', Arial, sans-serif;
+  --headline-font: 'WeddingSerif', Arial, sans-serif;
+  --text-font: 'WeddingSerif', Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  background-color: transparent;
+}
+
+.t-body {
+  margin: 0;
+}
+
+:where(.t-records) a,
+:where(.t-records) button {
+  outline: none;
+}
+
+:where(.t-records) a {
+  color: #a67d2b;
+  text-decoration: none;
+}
+
+:where(.t-records) a[href^=tel] {
+  color: inherit;
+  text-decoration: none;
+}
+
+:where(.t-records) ol {
+  padding-left: 22px;
+  margin-top: 0px;
+  margin-bottom: 10px;
+}
+
+:where(.t-records) ul {
+  padding-left: 20px;
+  margin-top: 0px;
+  margin-bottom: 10px;
+}
+
+:where(.t-records) b,
+:where(.t-records) strong {
+  font-weight: 700;
+}
+
+img:not([src]) {
+  visibility: hidden;
+}
+
+.t-body_scroll-locked {
+  position: fixed;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.r_anim {
+  transition: opacity 0.5s;
+}
+
+.r_hidden {
+  opacity: 0;
+}
+
+.r_showed {
+  opacity: 1;
+}
+
+.t-text {
+  font-family: var(--t-text-font, 'WeddingSerif', Arial, sans-serif);
+  font-weight: 300;
+  color: #000000;
+}
+
+.t-text_xs { font-size: 17px; line-height: 1.55; }
+.t-text_sm { font-size: 20px; line-height: 1.55; }
+.t-text_md { font-size: 22px; line-height: 1.55; }
+
+.t-title {
+  font-family: var(--t-headline-font, 'WeddingSerif', Arial, sans-serif);
+  font-weight: 600;
+  color: #000000;
+}
+.t-title_xxs { font-size: 36px; line-height: 1.23; }
+
+.t-descr {
+  font-family: var(--t-text-font, 'WeddingSerif', Arial, sans-serif);
+  font-weight: 300;
+  color: #000000;
+}
+.t-descr_xxs { font-size: 16px; line-height: 1.55; }
+.t-descr_xs  { font-size: 18px; line-height: 1.55; }
+.t-descr_md  { font-size: 22px; line-height: 1.55; }
+
+.t-btn {
+  display: inline-block;
+  font-family: var(--t-text-font, 'WeddingSerif', Arial, sans-serif);
+  border: 0 none;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  font-weight: 700;
+  background-image: none;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.t-opacity_70 { opacity: 0.7; }
+.t-align_center { text-align: center; }
+
+.t-rec_pt_0 { padding-top: 0; }
+.t-rec_pt_15 { padding-top: 15px; }
+.t-rec_pt_30 { padding-top: 30px; }
+.t-rec_pb_0 { padding-bottom: 0; }
+.t-rec_pb_15 { padding-bottom: 15px; }
+.t-rec_pb_60 { padding-bottom: 60px; }
+
+/* Custom Typography Font Faces */
+@font-face {
+  font-family: 'WeddingSerif';
+  src: url('../fonts/SourceSans3-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'WeddingSerif';
+  src: url('../fonts/Rufina-Regular.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'WeddingSerif';
+  src: url('../fonts/Rufina-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'WeddingSerif';
+  src: url('../fonts/BeauRivage-Regular.woff') format('woff');
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NewFonts';
+  src: url('../fonts/GT_Super_Display_Lig.woff') format('woff');
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'NewFonts';
+  src: url('../fonts/Amiri-Bold.woff') format('woff');
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'NewFonts';
+  src: url('../fonts/ImperialScript-Regul.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'NewFonts';
+  src: url('../fonts/ArticaPro.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'NewFonts';
+  src: url('../fonts/TheSilverEditorial-R.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'NewFonts';
+  src: url('../fonts/Ovo-Regular.woff2') format('woff2'), url('../fonts/Vazir_Regular.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'NewFonts';
+  src: url('../fonts/Canela-Light-Trial.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'NewFonts';
+  src: url('../fonts/decotype-thuluth-reg.woff') format('woff');
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'NewFonts';
+  src: url('../fonts/ReemKufi-Regular.woff2') format('woff2');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Otherfonts';
+  src: url('../fonts/NotoSansTamil-Light.woff2') format('woff2');
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Otherfonts';
+  src: url('../fonts/jh-naskh-expanded-me.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
+
+/* Artboard & Elements */
+.t123__centeredContainer { text-align: center; }
+.t396 { -webkit-text-size-adjust: 100%; }
+.t396__artboard {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+.t396__artboard .t396__artboard_scale { overflow: visible; }
+.t396__artboard.rendering .tn-elem { visibility: hidden; }
+.t396__artboard.rendered .tn-elem { visibility: visible; }
+.t396__carrier {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100vh;
+}
+.t396__filter {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100vh;
+}
+.t396__elem {
+  position: absolute;
+  box-sizing: border-box;
+  display: table;
+}
+.t396 .tn-atom {
+  display: table-cell;
+  vertical-align: middle;
+  width: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+.t396 .tn-atom__img {
+  width: 100%;
+  display: block;
+}
+.t396 .tn-atom__html {
+  vertical-align: top;
+}
+.tn-atom__scale-wrapper {
+  width: inherit;
+  height: inherit;
+}
+.t396__elem .tn-atom__scale-wrapper .tn-atom {
+  width: inherit;
+  height: inherit !important;
+  box-sizing: border-box;
+}
+.t396 .tn-atom ul,
+.t396 .tn-atom ol {
+  margin-bottom: 0;
+}
+.t396 a.tn-atom {
+  text-decoration: none;
+}
